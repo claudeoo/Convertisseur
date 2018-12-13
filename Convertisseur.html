@@ -1,0 +1,93 @@
+<html>
+<head>
+
+    <title> Convertisseur de devise </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="convertisseur.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script type="text/javascript" src="convertisseur.ts"></script>
+</head>
+
+
+<body>
+        <div class="header">
+                <h1 id="demo" class="display-4"> Convertisseur de devise</h1>
+                <hr>
+                <div class="text">
+                <p style="text-align:center;">Mon appplication met à votre disposition un convertisseur de devises, qui vous permet de convertir instantanément et de connaître le taux de change en direct.</p>
+                
+                <h1> Convertion dollar euro</h1>
+                <p> Vous entrez dans le calculateur le montant que vous souhaitez convertir, vous indiquez la devise d'origine et la devise qui vous intéresse. Et vous obtenez instantanément le montant dans la devise souhaitée, avec le taux de change entre les 2 monnaies.</p>
+            </div>
+                
+                <div class="card leform">
+                        <div class="card-body">
+                                <div class="row ">
+                                        <div class="col-sm">
+                                              <input type="number" id="price" class="form-control" placeholder="Euro €€€">    
+                                        </div>
+                                        <div class="col-sm">
+                                              <img onclick="inverse()" src="image/reverse.png" id="btn-reverse">
+                                        </div>
+                                        <div class="col-sm">
+                                              <input type="number" id="price" class="form-control" placeholder="Dollar $$$" value="1">
+                                        </div>
+                                        <div class="col-sm">
+                                              <button onclick="calcButton()" id="calculate" class="btn btn-primary"> Clacluler</button>
+                                        </div>
+                                      </div>
+                                      <div id="result"></div>
+                        </div>
+                      </div>
+                      <br>
+                      <br>
+                      <br>
+                       
+                    
+        </div>
+    
+
+    <script>
+    var priceInput = document.getElementById("price");
+var calcButton = document.getElementById("calculate");
+var resultDiv = document.getElementById("result");
+ 
+ calcButton.onclick = function(){
+
+     var price = parseFloat(priceInput.value);
+     price /=  0.8757;
+     
+     resultDiv.innerHTML = price.toFixed(2) +"$";
+ }
+ document.getElementById("btn-reverse").addEventListener("mouseover", mouseOver);
+document.getElementById("btn-reverse").addEventListener("mouseout", mouseOut);
+
+
+function mouseOver() {
+    document.getElementById("btn-reverse").style.backgroundColor = "red";
+}
+
+function mouseOut() {
+    document.getElementById("btn-reverse").style.backgroundColor = "rgb(95, 0, 0)";
+}
+function inverse(){
+    console.log("bonjour");
+} 
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

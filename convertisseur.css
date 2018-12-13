@@ -1,0 +1,31 @@
+
+
+#btn-reverse{
+    height: 32px;
+    width: 55px;
+    border: 1px solid black;
+    border-radius: 30px;
+    text-align: center;
+}
+.header{
+    background-image: linear-gradient(to bottom right, rgb(122, 33, 33), rgb(155, 33, 25));
+    padding: 10px;
+    text-align: center;
+}
+.leform{
+    background-image: linear-gradient(to bottom right, rgb(70, 20, 20), rgb(155, 33, 25));
+}
+.text{
+    text-align: left;
+}
+.title{
+    font-size:20px;
+    
+}
+body{
+    border: 1px solid black;
+    padding-left: 250px;
+    padding-right: 250px;
+    background-image: linear-gradient(to bottom right, rgb(110, 101, 101), rgb(136, 94, 91));
+}
+
